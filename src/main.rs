@@ -4,7 +4,7 @@ use std::fs;
 use std::io;
 use std::ffi;
 
-#[cfg(target_os = "linux")]
+#[cfg(target_family = "unix")]
 use std::os::unix::fs::symlink as soft_link;
 
 #[cfg(target_os = "windows")]
