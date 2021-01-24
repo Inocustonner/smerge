@@ -11,24 +11,24 @@ Imagine you want to copy some files from `dir1` to `dir2`, and you know that eit
 ```sh
 smerge path/to/dir1 path/to/dir2
 ```
-| *dir1 *
- &emsp;  |- *innerDir*: 25gb
- &emsp;  |- *file*: 13 gb
-| *dir2* # must exists when executing tool
- &emsp;  |- *innerDir*: ~0 gb # linked
- &emsp;  |- *file*: ~0 gb # linked
+| *dir1* <br />
+ &emsp;  |- *innerDir*: 25gb <br />
+ &emsp;  |- *file*: 13 gb <br />
+| *dir2* # must exists when executing tool <br />
+ &emsp;  |- *innerDir*: ~0 gb # linked <br />
+ &emsp;  |- *file*: ~0 gb # linked<br />
 
 In case your directories partially match you may add flag `-r`
 ```sh
 smerge -r path/to/dir1 path/to/dir2
 ```
-| *dir1*
- &emsp;  |- *innerDir*
- &emsp; &emsp;  |- *existing file*
- &emsp; &emsp;  |- ...
- &emsp;  |- *file*: 13 gb
-| *dir2* # must exists when executing tool
- &emsp;  |- *innerDir*: ~0 gb # will be linked
- &emsp; &emsp;  |- *existing file* # will be skipped
- &emsp; &emsp;  |- ... # will be linked
- &emsp;  |- *file*: ~0 gb # will be linked
+| *dir1* <br />
+ &emsp;  |- *innerDir* <br />
+ &emsp; &emsp;  |- *existing file* <br />
+ &emsp; &emsp;  |- ... <br />
+ &emsp;  |- *file*: 13 gb <br />
+| *dir2* # must exists when executing tool <br />
+ &emsp;  |- *innerDir*: ~0 gb # will be linked <br />
+ &emsp; &emsp;  |- *existing file* # will be skipped <br />
+ &emsp; &emsp;  |- ... # will be linked <br />
+ &emsp;  |- *file*: ~0 gb # will be linked <br />
